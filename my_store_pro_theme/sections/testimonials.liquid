@@ -1,0 +1,82 @@
+<section class="section-padding">
+  <div class="page-width">
+    <div class="section-heading">
+      <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.text }}</p>
+    </div>
+
+    <div class="testimonial-grid">
+      {% for block in section.blocks %}
+        <article class="testimonial-card" {{ block.shopify_attributes }}>
+          <div class="testimonial-card__stars">★★★★★</div>
+          <blockquote>“{{ block.settings.quote }}”</blockquote>
+          <strong>{{ block.settings.name }}</strong>
+          <span>{{ block.settings.role }}</span>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Customer love"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Designed to build trust before checkout"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Add social proof and store credibility with professional testimonial cards."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote",
+          "default": "The store feels modern, premium and easy to shop."
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Happy Customer"
+        },
+        {
+          "type": "text",
+          "id": "role",
+          "label": "Role",
+          "default": "Verified buyer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials",
+      "blocks": [
+        { "type": "testimonial", "settings": { "quote": "The design makes the brand look premium and trustworthy.", "name": "Ayesha R.", "role": "Verified buyer" } },
+        { "type": "testimonial", "settings": { "quote": "Everything is clean, fast and simple to understand.", "name": "Tanvir H.", "role": "Returning customer" } },
+        { "type": "testimonial", "settings": { "quote": "The homepage looks professional on both desktop and mobile.", "name": "Nadia K.", "role": "Store visitor" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,57 @@
+<section class="main-cart">
+  <div class="page-width">
+    <div class="section-heading">
+      <span class="eyebrow">Cart</span>
+      <h2>Your shopping cart</h2>
+      <p>Review your items before checkout.</p>
+    </div>
+
+    {% if cart.item_count > 0 %}
+      <form action="{{ routes.cart_url }}" method="post">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Quantity</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in cart.items %}
+              <tr>
+                <td>
+                  <a href="{{ item.url }}"><strong>{{ item.product.title }}</strong></a><br>
+                  <span>{{ item.variant.title }}</span>
+                </td>
+                <td>
+                  <input type="number" name="updates[]" value="{{ item.quantity }}" min="0" style="width:80px;min-height:42px;">
+                </td>
+                <td>{{ item.final_line_price | money }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <div class="cart-footer">
+          <div style="text-align:right;">
+            <p><strong>Subtotal: {{ cart.total_price | money }}</strong></p>
+            <button class="btn btn--outline" type="submit" name="update">Update cart</button>
+            <button class="btn btn--primary" type="submit" name="checkout">Checkout</button>
+          </div>
+        </div>
+      </form>
+    {% else %}
+      <div class="newsletter-box">
+        <h2>Your cart is empty</h2>
+        <p>Explore our latest products and add your favorites.</p>
+        <a class="btn btn--light" href="{{ routes.all_products_collection_url }}">Start shopping</a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main cart",
+  "settings": []
+}
+{% endschema %}

@@ -1,0 +1,82 @@
+<section class="section-padding">
+  <div class="page-width">
+    <div class="section-heading">
+      <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.text }}</p>
+    </div>
+
+    <div class="value-grid">
+      {% for block in section.blocks %}
+        <article class="value-card" {{ block.shopify_attributes }}>
+          <div class="value-card__icon">{{ block.settings.icon }}</div>
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Value props",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Why shop with us"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Everything customers expect from a modern brand"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Build trust quickly with clean content sections, benefit cards and conversion-focused design."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Value item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon",
+          "default": "🚚"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Fast shipping"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Reliable order handling and smooth customer experience from cart to delivery."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Value props",
+      "blocks": [
+        { "type": "item", "settings": { "icon": "🚚", "title": "Fast shipping", "text": "Reliable delivery and clear customer communication." } },
+        { "type": "item", "settings": { "icon": "💎", "title": "Premium quality", "text": "A polished design that helps products feel high-value." } },
+        { "type": "item", "settings": { "icon": "🔒", "title": "Secure checkout", "text": "Trust-focused layout with a clean path to purchase." } },
+        { "type": "item", "settings": { "icon": "💬", "title": "Friendly support", "text": "Helpful service section for building buyer confidence." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

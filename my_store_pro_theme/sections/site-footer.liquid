@@ -1,0 +1,55 @@
+<footer class="site-footer">
+  <div class="page-width site-footer__inner">
+    <div class="footer-grid">
+      <div class="footer-block">
+        <div class="footer-logo">{{ section.settings.logo_text | default: shop.name }}</div>
+        <p class="footer-text">{{ section.settings.description }}</p>
+      </div>
+
+      <div class="footer-block">
+        <h3>Shop</h3>
+        <a href="{{ routes.all_products_collection_url }}">All products</a>
+        <a href="/collections/frontpage">Featured</a>
+        <a href="{{ routes.cart_url }}">Cart</a>
+      </div>
+
+      <div class="footer-block">
+        <h3>Help</h3>
+        <a href="/pages/contact">Contact</a>
+        <a href="/pages/shipping-policy">Shipping</a>
+        <a href="/pages/refund-policy">Returns</a>
+      </div>
+
+      <div class="footer-block">
+        <h3>Brand</h3>
+        <a href="/pages/about">About</a>
+        <a href="/blogs/news">Journal</a>
+        <a href="/policies/privacy-policy">Privacy policy</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © {{ 'now' | date: '%Y' }} {{ shop.name }}. Designed with Shopify + GitHub workflow.
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Site footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "logo_text",
+      "label": "Logo text",
+      "default": "My Store"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "A professional storefront built for beautiful products, clean shopping and fast customer decisions."
+    }
+  ]
+}
+{% endschema %}

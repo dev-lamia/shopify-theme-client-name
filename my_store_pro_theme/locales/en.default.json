@@ -1,0 +1,14 @@
+{
+  "general": {
+    "search": "Search",
+    "cart": "Cart",
+    "menu": "Menu",
+    "view_all": "View all"
+  },
+  "products": {
+    "sold_out": "Sold out",
+    "sale": "Sale",
+    "add_to_cart": "Add to cart",
+    "quantity": "Quantity"
+  }
+}

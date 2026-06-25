@@ -1,0 +1,36 @@
+<section class="main-collection">
+  <div class="page-width">
+    <div class="collection-toolbar">
+      <div>
+        <span class="eyebrow">Collection</span>
+        <h1>{{ collection.title }}</h1>
+        {% if collection.description != blank %}
+          <p>{{ collection.description }}</p>
+        {% endif %}
+      </div>
+    </div>
+
+    {% paginate collection.products by 12 %}
+      <div class="product-grid">
+        {% for product in collection.products %}
+          {% render 'product-card', product: product %}
+        {% else %}
+          <p>No products found in this collection.</p>
+        {% endfor %}
+      </div>
+
+      {% if paginate.pages > 1 %}
+        <div style="margin-top:40px;text-align:center;">
+          {{ paginate | default_pagination }}
+        </div>
+      {% endif %}
+    {% endpaginate %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main collection",
+  "settings": []
+}
+{% endschema %}

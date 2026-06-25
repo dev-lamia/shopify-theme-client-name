@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Theme information",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "My Store Pro Theme - professional Shopify theme design for GitHub + Shopify workflow testing."
+      }
+    ]
+  },
+  {
+    "name": "Brand colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "brand_primary",
+        "label": "Primary color",
+        "default": "#7c3aed"
+      },
+      {
+        "type": "color",
+        "id": "brand_secondary",
+        "label": "Secondary color",
+        "default": "#06b6d4"
+      }
+    ]
+  }
+]

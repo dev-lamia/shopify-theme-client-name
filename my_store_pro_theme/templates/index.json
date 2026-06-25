@@ -1,0 +1,30 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-pro"
+    },
+    "values": {
+      "type": "value-props"
+    },
+    "featured_products": {
+      "type": "featured-products"
+    },
+    "collection_banner": {
+      "type": "collection-banner"
+    },
+    "testimonials": {
+      "type": "testimonials"
+    },
+    "newsletter": {
+      "type": "newsletter-pro"
+    }
+  },
+  "order": [
+    "hero",
+    "values",
+    "featured_products",
+    "collection_banner",
+    "testimonials",
+    "newsletter"
+  ]
+}
