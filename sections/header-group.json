@@ -13,10 +13,22 @@
   "sections": {
     "header": {
       "type": "header",
-      "settings": {}
+      "settings": {
+        "menu": "",
+        "customer_account_menu": "customer-account-main-menu"
+      }
+    },
+    "custom_hero_DyTqbJ": {
+      "type": "custom-hero",
+      "name": "Custom Hero",
+      "settings": {
+        "heading": "Welcome to My Store",
+        "text": "This section was created from VS Code."
+      }
     }
   },
   "order": [
-    "header"
-  ],
+    "header",
+    "custom_hero_DyTqbJ"
+  ]
 }
