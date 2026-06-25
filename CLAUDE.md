@@ -1,0 +1,1 @@
+/home/pc17/shopify-projects/client-theme/AGENTS.md
