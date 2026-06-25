@@ -11,6 +11,11 @@
   "type": "footer",
   "name": "t:general.footer",
   "sections": {
+    "custom_section_WDJiBQ": {
+      "type": "custom-section",
+      "name": "t:general.custom_section",
+      "settings": {}
+    },
     "footer": {
       "type": "footer",
       "settings": {
@@ -20,6 +25,7 @@
     }
   },
   "order": [
+    "custom_section_WDJiBQ",
     "footer"
   ]
 }

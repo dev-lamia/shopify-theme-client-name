@@ -9,10 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "hello-world",
-      "settings": {}
-    },
     "custom_section_Xqm7kM": {
       "type": "custom-section",
       "name": "t:general.custom_section",
@@ -22,7 +18,6 @@
     }
   },
   "order": [
-    "main",
     "custom_section_Xqm7kM"
   ]
 }
