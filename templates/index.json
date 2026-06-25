@@ -12,9 +12,18 @@
     "main": {
       "type": "hello-world",
       "settings": {}
+    },
+    "custom_hero_YRwhKG": {
+      "type": "custom-hero",
+      "name": "Custom Hero",
+      "settings": {
+        "heading": "Welcome to My Store",
+        "text": "This section was created from VS Code."
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_hero_YRwhKG"
   ]
 }
