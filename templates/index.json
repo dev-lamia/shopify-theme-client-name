@@ -13,17 +13,16 @@
       "type": "hello-world",
       "settings": {}
     },
-    "custom_hero_YRwhKG": {
-      "type": "custom-hero",
-      "name": "Custom Hero",
+    "custom_section_Xqm7kM": {
+      "type": "custom-section",
+      "name": "t:general.custom_section",
       "settings": {
-        "heading": "Welcome to My Store",
-        "text": "This section was created from VS Code."
+        "background_image": "shopify://shop_images/logop.png"
       }
     }
   },
   "order": [
     "main",
-    "custom_hero_YRwhKG"
+    "custom_section_Xqm7kM"
   ]
 }
